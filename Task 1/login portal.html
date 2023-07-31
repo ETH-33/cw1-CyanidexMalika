@@ -8,40 +8,106 @@
     <title>Banking Portal</title>
 </head>
 <body>
+    <!---------------Login-ko-portal----------->
    
-   <div class="maindiv">
-    
+   <div class="maincontainer">
    <div class="formbox">
-        <div class="Forminside">
+    <div class="loginbox" id="login">
         <form action="#">
             <h3>Login</h3>
             <div class="boxes">
-                <i class="fa-regular fa-user fa-fade"></i>  
-                <input type="email" required>
+                <i class="fa-regular fa-envelope fa-fade"></i>
+                <input type="email" id="loginemail" required>
                 <label for="email">Registered Email</label>
             </div>
             <div class="boxes">
                 <i class="fa-solid fa-lock fa-fade"></i>
-                <input type="password" required>
+                <input type="password" id="loginpassword" required>
                 <label for="password">Password</label>
             </div>
             <div class="rem">
-            <label for="">
-            <input type="checkbox">Remember</label><br>
-            
+                <label for="">
+                    <input type="checkbox">Remember</label><br>
+    
             </div>
             <button>Login</button>
             <div class="forgetpass">
-                <a href="#">Forget password?</a>
-            </div>
-            <div class="register">
-                Not registered yet? <a href="#">Register</a>
-            </div>
+    
         </form>
+        <a href="#">Forget password?</a>
+    </div>
+    <div class="registerho">
+        Not registered yet? <a href="#">Register</a>
+    </div>
+    </div>
+
+     
+
+
+        <!--------------registerho hai----------------------->
+        <div class="registerbox" id="register">
+            <form action="#">
+                <h3>Sign Up</h3>
+                <div class="boxes">
+                    <i class="fa-regular fa-user fa-fade"></i>
+                    <input type="text" id="userid" required>
+                    <label for="email">UserName</label>
+                </div>
+                <div class="boxes">
+                    <i class="fa-regular fa-envelope fa-fade"></i>
+                    <input type="email" id="registeremail" required>
+                    <label for="email">Email</label>
+                </div>
+                <div class="boxes">
+                    <i class="fa-solid fa-lock fa-fade"></i>
+                    <input type="password" id="registerpassword"required>
+                    <label for="password">Password</label>
+                </div>
+                <div class="rem">
+                    <label for="">
+                        <input type="checkbox" required>Agree with all terms.</label><br>
+        
+                </div>
+                <button>Signup</button>
+                <div class="forgetpass">
+        
+            </form>
+            
         </div>
-         </div>
+        
+        </div>
+
+<!--switching for register and login page-->
+        <div class="switch">
+            <a href="#" class="login" onclick="login1()">Login</a>
+            <a href="#" class="register" onclick="register1()">Register</a>
+            <div class="btn-active" id="btn"></div>
+
+        </div>
+        </div>
    
    
         </div>
+        
+        <script>
+
+            var a= document.getElementById('login');
+            var b = document.getElementById('register');
+            var c = document.getElementById('btn');
+            
+            function login1(){
+                a.style.left = "20px";
+                b.style.left = "450px";
+                c.style.left = "0px";
+
+            }
+            function register1() {
+                    a.style.left = "-400px";
+                    b.style.left = "20px";
+                    c.style.left = "195px";
+
+                }
+        </script>
+        
 </body>
 </html>
